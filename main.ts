@@ -21,6 +21,10 @@ import { buildDossier } from './vendor/makefun-roblox.ts';
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
+/** The game this entry hands in, named once here so every hand-in run announces the same title. */
+const ENTRY_TITLE = 'Brainrot Bunker - Collect & Defend!';
+console.log(`roblox-brainrot-01 entry: ${ENTRY_TITLE}`);
+
 /** cpSync's filter: leave out every file and directory whose name starts with a dot (.gitkeep, .DS_Store, .git). */
 const notDotted = (path: string): boolean => !basename(path).startsWith('.');
 
